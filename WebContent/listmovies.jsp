@@ -12,8 +12,14 @@
 </head>
 <body>
 	<%@ include file="header.html"%>
-	<h2>List Of Movies</h2>
-
+	
+	<h2>List Of Movies</h2>	
+	
+	<form action="searchmovie.jsp" method="post">
+					Title <br /> <input type="text" name="movie_title" value="${param.movie_title}"
+						required /> <input type="submit" value="Search" />
+	</form>
+	<p />
 	<sql:query var="movies"  dataSource="${applicationScope.oracleDataSource}">
       select * from movies
       order by movies_id 

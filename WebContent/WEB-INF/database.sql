@@ -34,3 +34,13 @@ insert into movies values(movie_id_seq.nextval, 'Old', 'Night Shyamalan', 'Night
 insert into movies values(movie_id_seq.nextval, 'Escape Room', 'Adam Robitel', 'Taylor Russell');
 
 insert into movies values(movie_id_seq.nextval, 'A Quiet Place', 'John Krasinski', 'John Krasinski');
+
+instr(upper(movie_title),?) >= 1
+
+<sql:query var="movies"
+						dataSource="${applicationScope.oracleDataSource}">
+			           select * from movies
+			           where  instr(upper(movie_title),?) >= 1
+			           order by movies_id
+			          <sql:param value="${param.movie_title.toUpperCase()}" />
+					</sql:query>

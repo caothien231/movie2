@@ -45,7 +45,7 @@
 	    <input type="hidden" value="${param.movies_id}" name="id" />
 		Review <br /> <input type="text" name="review" />
 		<p />
-		Rating <br /> <input type="number" name="rating" />
+		Rating <br /> <input type="number" name="rating"  required/>
 		<p />
 		<input type="submit" value="Submit Review" />
 	</form>

@@ -19,7 +19,7 @@
 						<c:if test="${count == 0}">
 							<h3>Sorry! [${param.title}] could not be added due to error!</h3>
 						</c:if>
-						<c:redirect url="movie.jsp?id=${param.movies_id}"></c:redirect>
+					<c:redirect url="movie.jsp?movies_id=${param.id}"></c:redirect>
 					</c:if>
 					
 	
